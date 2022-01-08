@@ -1,0 +1,29 @@
+$base-font: 'Montserrat', sans-serif;
+.navbar-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    margin-top: 0.3rem;
+    height: 65%;
+    grid-area: buttons;
+    font-family: $base-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+    box-shadow: #1A1717 0 0 1px 0;
+
+    &:hover {
+      background-color: rgba(240, 237, 77, 0.85);
+      cursor: pointer;
+    }
+
+    @media (max-width: 572px) {
+      margin: 0.3rem 0.3rem 0 0.3rem;
+    }
+  }
+}

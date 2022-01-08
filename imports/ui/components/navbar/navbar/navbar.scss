@@ -1,0 +1,48 @@
+.nav-bar-wrapper {
+  min-height: 76px;
+  padding: 1rem 1rem 0 1rem;
+  background: linear-gradient(150.02deg, rgba(255, 237, 77, 0.47) 60.77%, rgba(232, 234, 123, 0.3) 90.97%);
+  $base-font: 'Montserrat', sans-serif;
+
+
+  .nav-bar-content {
+    min-height: 60px;
+    display: grid;
+    grid-template:
+    [start] "logo buttons cart" 1fr  [end] / 0.1fr 6fr 1fr;
+    gap: 9rem;
+    @media (max-width: 976px) {
+      gap: 3rem;
+    }
+    @media (min-width: 504px) and (max-width: 672px) {
+      gap: 1rem;
+    }
+    @media (max-width: 504px) {
+      gap: 0;
+    }
+    @media (max-width: 478px) {
+      display: flex;
+      align-items: center;
+    }
+
+
+    .nav-bar-logo-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-bar-buttons-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 478px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 478px) {
+    padding: 0 0.1 0 0;
+  }
+}

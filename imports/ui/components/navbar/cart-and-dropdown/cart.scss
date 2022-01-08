@@ -1,0 +1,63 @@
+@keyframes triangleMove {
+  0% {
+    transform: rotate(0deg);
+    border-top: 9px solid black;
+  }
+  25% {
+    transform: rotate(30deg);
+    border-top: 9px solid rgba(104, 0, 0, 1);
+  }
+  50% {
+    transform: rotate(0deg);
+    border-top: 9px solid rgba(205, 0, 0, 1);
+  }
+  75% {
+    transform: rotate(-30deg);
+    border-top: 9px solid rgba(143, 0, 0, 1);
+  }
+  100% {
+    transform: rotate(0deg);
+    border-top: 9px solid rgba(81, 0, 0, 1);
+  }
+}
+
+.dropdown {
+  max-height: 50.96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .price {
+    display: flex;
+    align-items: center;
+
+    p {
+      cursor: default;
+      margin: 0;
+      font-family: 'Robotos', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @media (max-width: 1500px) {
+      margin-left: 0.7rem;
+      margin-right: 0.7rem;
+    }
+  }
+
+  .triangle-button {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid black;
+    transform-origin: center;
+
+    &:hover {
+      cursor: pointer;
+      animation: triangleMove 6s infinite;
+    }
+  }
+}
